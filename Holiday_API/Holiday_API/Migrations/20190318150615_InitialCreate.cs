@@ -8,24 +8,24 @@ namespace Holiday_API.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Holidays",
+                name: "Holiday",
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(nullable: true),
-                    Date = table.Column<string>(nullable: true)
+                    Name = table.Column<string>(nullable: false),
+                    Date = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Holidays", x => x.ID);
+                    table.PrimaryKey("PK_Holiday", x => x.ID);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Holidays");
+                name: "Holiday");
         }
     }
 }
