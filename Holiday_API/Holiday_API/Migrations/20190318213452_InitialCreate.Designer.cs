@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Holiday_API.Migrations
 {
     [DbContext(typeof(Holiday_APIContext))]
-    [Migration("20190318150615_InitialCreate")]
+    [Migration("20190318213452_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
