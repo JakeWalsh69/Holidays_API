@@ -5,7 +5,6 @@ namespace Holiday_API
 {
     public class Holiday
     {
-        [Required]
         public int ID { get; set; }
 
         [Required]
