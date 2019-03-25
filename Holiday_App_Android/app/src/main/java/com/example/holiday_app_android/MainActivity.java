@@ -4,45 +4,66 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 
+import com.example.holiday_app_android.adapters.HolidayAdapter;
+import com.example.holiday_app_android.clients.HolidayRestClient;
+import com.example.holiday_app_android.models.Holiday;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.loopj.android.http.JsonHttpResponseHandler;
 
 import androidx.appcompat.app.AppCompatActivity;
+import cz.msebera.android.httpclient.Header;
+import cz.msebera.android.httpclient.message.BasicHeader;
 
 import android.view.MenuItem;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView mTextMessage;
-
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
-                    return true;
-                case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_dashboard);
-                    return true;
-                case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_notifications);
-                    return true;
-            }
-            return false;
-        }
-    };
+    private ListView holidayList;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mTextMessage = (TextView) findViewById(R.id.message);
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        getHolidays();
+    }
+
+    private void getHolidays()
+    {
+        List<Header> headers = new ArrayList<Header>();
+        headers.add(new BasicHeader("Accept", "application/json"));
+
+        HolidayRestClient.get(MainActivity.this, "api/Holidays", headers.toArray(new Header[headers.size()]),
+                null, new JsonHttpResponseHandler()
+                {
+                    @Override
+                    public void onSuccess(int statusCode, Header[] headers, JSONArray response)
+                    {
+                        ArrayList<Holiday> holidayArray = new ArrayList<Holiday>();
+                        HolidayAdapter holidayAdapter = new HolidayAdapter(MainActivity.this, holidayArray);
+
+                        for (int i = 0; i < response.length(); i++)
+                        {
+                            try {
+                                holidayAdapter.add(new Holiday(response.getJSONObject(i)));
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+
+                        holidayList = (ListView) findViewById(R.id.list_holidays);
+                        holidayList.setAdapter(holidayAdapter);
+                    }
+                });
     }
 
 }

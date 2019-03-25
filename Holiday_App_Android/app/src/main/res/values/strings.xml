@@ -1,6 +1,9 @@
 <resources>
-    <string name="app_name">Holiday_App_Android</string>
+    <string name="app_name">Irish Holiday App</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_id">Holiday ID</string>
+    <string name="title_name">Name</string>
+    <string name="title_date">Date</string>
+    <string name="title_dashboard">Search by Month</string>
+    <string name="title_notifications">Filter by Type</string>
 </resources>
