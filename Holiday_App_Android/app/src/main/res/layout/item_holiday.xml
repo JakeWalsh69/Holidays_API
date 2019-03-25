@@ -13,53 +13,26 @@
         android:id="@+id/label_title_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/label_title_id"
-        android:layout_marginTop="-18dp"
+        android:layout_below="@+id/label_title_name"
         android:text="@string/title_date" />
 
     <TextView
         android:id="@+id/value_title_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/label_title_id"
-        android:layout_marginLeft="200dp"
-        android:layout_toRightOf="@+id/label_title_date" />
-
-    <TextView
-        android:id="@+id/label_title_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@+id/label_title_id" />
-
-    <TextView
-        android:id="@+id/value_title_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/value_title_name"
-        android:layout_alignTop="@+id/label_title_id"
-        android:layout_marginLeft="295dp"
-        android:layout_marginTop="21dp" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:layout_below="@+id/label_title_name"
+        android:layout_marginLeft="200dp" />
 
     <TextView
         android:id="@+id/value_title_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/label_title_id"
-        android:layout_marginLeft="208dp"
-        android:layout_marginTop="138dp"
-        android:layout_toRightOf="@+id/label_title_name" />
+        android:layout_marginLeft="200dp" />
 
     <TextView
         android:id="@+id/label_title_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/label_title_id"
-        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp"
         android:text="@string/title_name" />
 </RelativeLayout>

@@ -37,7 +37,7 @@ public class HolidayAdapter extends ArrayAdapter<Holiday> {
             LayoutInflater inflater = LayoutInflater.from(getContext());
             convertView = inflater.inflate(R.layout.item_holiday, parent, false);
 
-            viewHolder.id = (TextView) convertView.findViewById(R.id.value_title_id);
+//            viewHolder.id = (TextView) convertView.findViewById(R.id.value_title_id);
             viewHolder.name = (TextView) convertView.findViewById(R.id.value_title_name);
             viewHolder.date = (TextView) convertView.findViewById(R.id.value_title_date);
 
@@ -46,7 +46,7 @@ public class HolidayAdapter extends ArrayAdapter<Holiday> {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        viewHolder.id.setText(holiday.getID());
+//        viewHolder.id.setText(holiday.getID());
         viewHolder.name.setText(holiday.getName());
         viewHolder.date.setText(holiday.getDate());
 
