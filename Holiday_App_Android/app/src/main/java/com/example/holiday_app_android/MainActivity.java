@@ -1,26 +1,15 @@
 package com.example.holiday_app_android;
-
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-
 import com.example.holiday_app_android.adapters.HolidayAdapter;
 import com.example.holiday_app_android.clients.HolidayRestClient;
 import com.example.holiday_app_android.models.Holiday;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.loopj.android.http.JsonHttpResponseHandler;
-
 import androidx.appcompat.app.AppCompatActivity;
 import cz.msebera.android.httpclient.Header;
 import cz.msebera.android.httpclient.message.BasicHeader;
-
-import android.view.MenuItem;
 import android.widget.ListView;
-import android.widget.TextView;
-
 import org.json.JSONArray;
 import org.json.JSONException;
-
 import java.util.ArrayList;
 import java.util.List;
 

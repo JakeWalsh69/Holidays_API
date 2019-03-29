@@ -6,10 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-
 import com.example.holiday_app_android.R;
 import com.example.holiday_app_android.models.Holiday;
-
 import java.util.ArrayList;
 
 public class HolidayAdapter extends ArrayAdapter<Holiday> {

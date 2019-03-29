@@ -3,7 +3,6 @@ package com.example.holiday_app_android.clients;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
-
 import android.content.Context;
 import cz.msebera.android.httpclient.Header;
 
