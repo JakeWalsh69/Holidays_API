@@ -1,0 +1,9 @@
+<resources>
+     <string name="app_name">Application irlandaise des vacances</string>
+     <string name="title_home">Accueil</string>
+     <string name="title_id">ID de vacances</string>
+     <string name="title_name">Nom</string>
+     <string name="title_date">Date</string>
+     <string name="title_dashboard">Recherche par mois</string>
+     <string name="title_notifications">Filtrer par type</string>
+</resources>
