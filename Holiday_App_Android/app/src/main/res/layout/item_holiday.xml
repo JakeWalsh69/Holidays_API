@@ -8,6 +8,9 @@
     android:paddingTop="@dimen/activity_vertical_margin">
 
     <TextView
+        android:textColor="#ff0000"
+        android:textSize="15sp"
+        android:textStyle="bold"
         android:id="@+id/label_title_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -15,6 +18,9 @@
         android:text="@string/title_date" />
 
     <TextView
+        android:textColor="#ff0000"
+        android:textSize="15sp"
+        android:textStyle="bold"
         android:id="@+id/value_title_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,12 +28,18 @@
         android:layout_marginLeft="200dp" />
 
     <TextView
+        android:textColor="#ff0000"
+        android:textSize="15sp"
+        android:textStyle="bold"
         android:id="@+id/value_title_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="200dp" />
 
     <TextView
+        android:textColor="#ff0000"
+        android:textSize="15sp"
+        android:textStyle="bold"
         android:id="@+id/label_title_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
