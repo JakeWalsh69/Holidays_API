@@ -8,41 +8,54 @@
     android:paddingTop="@dimen/activity_vertical_margin">
 
     <TextView
-        android:textColor="#ff0000"
+        android:textColor="#ffffff"
+        android:background="#ABA8A7"
+        android:padding="8px"
         android:textSize="15sp"
         android:textStyle="bold"
+        android:textAlignment="center"
         android:id="@+id/label_title_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/label_title_name"
+        android:width="150px"
         android:text="@string/title_date" />
 
     <TextView
-        android:textColor="#ff0000"
+        android:textColor="#ffffff"
+        android:background="#ABA8A7"
+        android:padding="8px"
         android:textSize="15sp"
         android:textStyle="bold"
+        android:textAlignment="center"
         android:id="@+id/value_title_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/label_title_name"
-        android:layout_marginLeft="200dp" />
+        android:layout_marginLeft="150dp" />
 
-    <TextView
-        android:textColor="#ff0000"
+        <TextView
+        android:textColor="#ffffff"
+        android:background="#3B3B3A"
+        android:padding="8px"
         android:textSize="15sp"
         android:textStyle="bold"
         android:id="@+id/value_title_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="200dp" />
+        android:layout_marginLeft="150dp" />
 
-    <TextView
-        android:textColor="#ff0000"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:id="@+id/label_title_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="@string/title_name" />
+        <TextView
+            android:textColor="#ffffff"
+            android:background="#3B3B3A"
+            android:padding="8px"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:id="@+id/label_title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:width="150px"
+            android:text="@string/title_name" />
 </RelativeLayout>

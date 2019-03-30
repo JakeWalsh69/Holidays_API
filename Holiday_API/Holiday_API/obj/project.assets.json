@@ -13060,11 +13060,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jakew\\OneDrive\\Desktop\\CA2_Holiday_API\\Holiday_API\\Holiday_API\\Holiday_API.csproj",
+      "projectUniqueName": "C:\\Users\\jakew\\OneDrive\\Desktop\\Holidays_API\\Holiday_API\\Holiday_API\\Holiday_API.csproj",
       "projectName": "Holiday_API",
-      "projectPath": "C:\\Users\\jakew\\OneDrive\\Desktop\\CA2_Holiday_API\\Holiday_API\\Holiday_API\\Holiday_API.csproj",
+      "projectPath": "C:\\Users\\jakew\\OneDrive\\Desktop\\Holidays_API\\Holiday_API\\Holiday_API\\Holiday_API.csproj",
       "packagesPath": "C:\\Users\\jakew\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jakew\\OneDrive\\Desktop\\CA2_Holiday_API\\Holiday_API\\Holiday_API\\obj\\",
+      "outputPath": "C:\\Users\\jakew\\OneDrive\\Desktop\\Holidays_API\\Holiday_API\\Holiday_API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

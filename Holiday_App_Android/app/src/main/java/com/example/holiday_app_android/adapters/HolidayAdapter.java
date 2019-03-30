@@ -1,10 +1,13 @@
 package com.example.holiday_app_android.adapters;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 import com.example.holiday_app_android.R;
 import com.example.holiday_app_android.models.Holiday;
