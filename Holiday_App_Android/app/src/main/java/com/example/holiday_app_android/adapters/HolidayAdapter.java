@@ -23,7 +23,7 @@ public class HolidayAdapter extends ArrayAdapter<Holiday> {
 
     public HolidayAdapter(Context context, ArrayList<Holiday> holidays)
     {
-        super(context, R.layout.item_holiday, holidays);
+        super(context, R.layout.activity_main, holidays);
     }
 
     @Override

@@ -1,17 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/holiday"
-    tools:context="com.example.holiday_app_android.MainActivity">
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:background="@drawable/holiday">
+
+        <TextView
+            android:id="@+id/allHolidays"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="ALL HOLIDAYS"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:paddingBottom="32px"
+            android:textSize="48px"
+            android:textStyle="bold"
+            android:background="#000000"/>
 
     <ListView
         android:id="@+id/list_holidays"
         android:layout_width="match_parent"
+        android:layout_height="292dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="30dip"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"></ListView>
+
+    <TextView
+        android:id="@+id/middle"
+        android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/middle"
+        android:layout_marginTop="-274dp"
+        android:background="#000000"
+        android:gravity="center_vertical"
+        android:paddingBottom="32px"
+        android:text="BANK HOLIDAYS"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="48px"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/list_bank_holidays"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/middle"
+        android:layout_marginTop="-224dp"></ListView>
 </RelativeLayout>

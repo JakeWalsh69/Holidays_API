@@ -16,6 +16,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private ListView holidayList;
+    private ListView bankHolidayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         getHolidays();
+        getBankHolidays();
     }
 
     private void getHolidays()
@@ -51,6 +53,36 @@ public class MainActivity extends AppCompatActivity {
 
                         holidayList = (ListView) findViewById(R.id.list_holidays);
                         holidayList.setAdapter(holidayAdapter);
+                    }
+                });
+    }
+
+    private void getBankHolidays()
+    {
+        List<Header> headers = new ArrayList<Header>();
+        headers.add(new BasicHeader("Accept", "application/json"));
+
+        HolidayRestClient.get(MainActivity.this, "api/Holidays", headers.toArray(new Header[headers.size()]),
+                null, new JsonHttpResponseHandler()
+                {
+                    @Override
+                    public void onSuccess(int statusCode, Header[] headers, JSONArray response)
+                    {
+                        ArrayList<Holiday> holidayArray = new ArrayList<Holiday>();
+                        HolidayAdapter holidayAdapter = new HolidayAdapter(MainActivity.this, holidayArray);
+
+                        for (int i = 0; i < response.length(); i++)
+                        {
+                            if (i == 4 || i == 5 || i == 6 || i == 7)
+                            try {
+                                holidayAdapter.add(new Holiday(response.getJSONObject(i)));
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+
+                        bankHolidayList = (ListView) findViewById(R.id.list_bank_holidays);
+                        bankHolidayList.setAdapter(holidayAdapter);
                     }
                 });
     }
