@@ -42,6 +42,20 @@ namespace Holiday_API.Controller
             return holiday;
         }
 
+        // GET: api/Holidays/search/Easter
+        [HttpGet("search/{name}")]
+        public async Task<ActionResult<Holiday>> GetHolidayByName(string name)
+        {
+            IEnumerable<Holiday> hol = await _context.Holiday.ToListAsync();
+
+            Holiday holiday = hol.SingleOrDefault(h => h.Name.ToUpper() == name.ToUpper());
+                if (holiday == null)
+                {
+                    return NotFound();
+                }
+            return Ok(holiday);
+        }
+
         // PUT: api/Holidays/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutHoliday(int id, Holiday holiday)
