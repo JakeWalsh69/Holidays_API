@@ -7,27 +7,35 @@
     android:background="@drawable/holiday"
     tools:ignore="Overdraw">
 
-        <TextView
-            android:id="@+id/allHolidays"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:text="@string/all_holidays"
-            android:textAlignment="center"
-            android:textColor="#ffffff"
-            android:paddingBottom="32px"
-            android:textSize="48px"
-            android:textStyle="bold"
-            android:background="#000000"
-            tools:ignore="HardcodedText,PxUsage" />
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:text="Search For Holidays" >
+    </SearchView>
+
+    <TextView
+        android:id="@+id/allHolidays"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:gravity="center_vertical"
+        android:paddingBottom="8px"
+        android:text="@string/all_holidays"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="48px"
+        android:textStyle="bold"
+        android:layout_marginTop="45dip"
+        tools:ignore="HardcodedText,PxUsage" />
 
     <ListView
         android:id="@+id/list_holidays"
         android:layout_width="match_parent"
-        android:layout_height="292dp"
+        android:layout_height="206dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="30dip"
+        android:layout_marginTop="90dip"
         android:layout_marginEnd="0dp"
         android:layout_marginRight="0dp" />
 
@@ -43,7 +51,7 @@
         android:layout_marginTop="-274dp"
         android:background="#000000"
         android:gravity="center_vertical"
-        android:paddingBottom="32px"
+        android:paddingBottom="8px"
         android:text="@string/bank_holidays"
         android:textAlignment="center"
         android:textColor="#ffffff"

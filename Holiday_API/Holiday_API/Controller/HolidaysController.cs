@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Holiday_API;
 using Holiday_API.Models;
 
 namespace Holiday_API.Controller
@@ -42,18 +39,18 @@ namespace Holiday_API.Controller
             return holiday;
         }
 
-        // GET: api/Holidays/search/Easter
-        [HttpGet("search/{name}")]
+        // GET: api/Holidays/Easter
+        [HttpGet("{name}")]
         public async Task<ActionResult<Holiday>> GetHolidayByName(string name)
         {
-            IEnumerable<Holiday> hol = await _context.Holiday.ToListAsync();
+            var holiday = await _context.Holiday.FindAsync(name);
 
-            Holiday holiday = hol.SingleOrDefault(h => h.Name.ToUpper() == name.ToUpper());
-                if (holiday == null)
-                {
-                    return NotFound();
-                }
-            return Ok(holiday);
+            if (holiday == null)
+            {
+                return NotFound();
+            }
+
+            return holiday;
         }
 
         // PUT: api/Holidays/5

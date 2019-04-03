@@ -17,7 +17,6 @@ C:\Users\jakew\OneDrive\Desktop\Holidays_API\Holiday_API\Holiday_API\bin\Debug\n
 C:\Users\jakew\OneDrive\Desktop\Holidays_API\Holiday_API\Holiday_API\bin\Debug\netcoreapp2.2\Holiday_API.runtimeconfig.dev.json
 C:\Users\jakew\OneDrive\Desktop\Holidays_API\Holiday_API\Holiday_API\bin\Debug\netcoreapp2.2\Holiday_API.dll
 C:\Users\jakew\OneDrive\Desktop\Holidays_API\Holiday_API\Holiday_API\bin\Debug\netcoreapp2.2\Holiday_API.pdb
-C:\Users\jakew\OneDrive\Desktop\Holidays_API\Holiday_API\Holiday_API\obj\Debug\netcoreapp2.2\Holiday_API.csprojAssemblyReference.cache
 C:\Users\jakew\OneDrive\Desktop\Holidays_API\Holiday_API\Holiday_API\obj\Debug\netcoreapp2.2\Holiday_API.csproj.CoreCompileInputs.cache
 C:\Users\jakew\OneDrive\Desktop\Holidays_API\Holiday_API\Holiday_API\obj\Debug\netcoreapp2.2\Holiday_API.RazorAssemblyInfo.cache
 C:\Users\jakew\OneDrive\Desktop\Holidays_API\Holiday_API\Holiday_API\obj\Debug\netcoreapp2.2\Holiday_API.RazorAssemblyInfo.cs

@@ -1,8 +1,5 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Linq;
 
 // Authors: Jake Walsh and Jordan Williams
 
