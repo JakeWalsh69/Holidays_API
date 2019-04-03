@@ -30,16 +30,16 @@ public class MainActivity extends AppCompatActivity {
 
     private void getHolidays()
     {
-        List<Header> headers = new ArrayList<Header>();
+        List<Header> headers = new ArrayList<>();
         headers.add(new BasicHeader("Accept", "application/json"));
 
-        HolidayRestClient.get(MainActivity.this, "api/Holidays", headers.toArray(new Header[headers.size()]),
+        HolidayRestClient.get(MainActivity.this, "api/Holidays", headers.toArray(new Header[0]),
                 null, new JsonHttpResponseHandler()
                 {
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, JSONArray response)
                     {
-                        ArrayList<Holiday> holidayArray = new ArrayList<Holiday>();
+                        ArrayList<Holiday> holidayArray = new ArrayList<>();
                         HolidayAdapter holidayAdapter = new HolidayAdapter(MainActivity.this, holidayArray);
 
                         for (int i = 0; i < response.length(); i++)
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
 
-                        holidayList = (ListView) findViewById(R.id.list_holidays);
+                        holidayList = findViewById(R.id.list_holidays);
                         holidayList.setAdapter(holidayAdapter);
                     }
                 });
@@ -59,16 +59,16 @@ public class MainActivity extends AppCompatActivity {
 
     private void getBankHolidays()
     {
-        List<Header> headers = new ArrayList<Header>();
+        List<Header> headers = new ArrayList<>();
         headers.add(new BasicHeader("Accept", "application/json"));
 
-        HolidayRestClient.get(MainActivity.this, "api/Holidays", headers.toArray(new Header[headers.size()]),
+        HolidayRestClient.get(MainActivity.this, "api/Holidays", headers.toArray(new Header[0]),
                 null, new JsonHttpResponseHandler()
                 {
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, JSONArray response)
                     {
-                        ArrayList<Holiday> holidayArray = new ArrayList<Holiday>();
+                        ArrayList<Holiday> holidayArray = new ArrayList<>();
                         HolidayAdapter holidayAdapter = new HolidayAdapter(MainActivity.this, holidayArray);
 
                         for (int i = 0; i < response.length(); i++)
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
 
-                        bankHolidayList = (ListView) findViewById(R.id.list_bank_holidays);
+                        bankHolidayList = findViewById(R.id.list_bank_holidays);
                         bankHolidayList.setAdapter(holidayAdapter);
                     }
                 });

@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:fillViewport="true"
-    android:background="@drawable/holiday">
+    android:background="@drawable/holiday"
+    tools:ignore="Overdraw">
 
         <TextView
             android:id="@+id/allHolidays"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:text="ALL HOLIDAYS"
+            android:text="@string/all_holidays"
             android:textAlignment="center"
             android:textColor="#ffffff"
             android:paddingBottom="32px"
             android:textSize="48px"
             android:textStyle="bold"
-            android:background="#000000"/>
+            android:background="#000000"
+            tools:ignore="HardcodedText,PxUsage" />
 
     <ListView
         android:id="@+id/list_holidays"
@@ -26,7 +29,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginTop="30dip"
         android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp"></ListView>
+        android:layout_marginRight="0dp" />
 
     <TextView
         android:id="@+id/middle"
@@ -41,16 +44,17 @@
         android:background="#000000"
         android:gravity="center_vertical"
         android:paddingBottom="32px"
-        android:text="BANK HOLIDAYS"
+        android:text="@string/bank_holidays"
         android:textAlignment="center"
         android:textColor="#ffffff"
         android:textSize="48px"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,PxUsage" />
 
     <ListView
         android:id="@+id/list_bank_holidays"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/middle"
-        android:layout_marginTop="-224dp"></ListView>
+        android:layout_marginTop="-224dp" />
 </RelativeLayout>

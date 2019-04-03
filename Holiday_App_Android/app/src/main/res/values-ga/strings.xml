@@ -1,9 +1,11 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
      <string name="app_name">App Saoire na hÉireann</string>
-     <string name="title_home">Baile</string>
-     <string name="title_id">ID Saoire</string>
+     <string name="title_home" tools:keep="@string/title_home">Baile</string>
+     <string name="title_id" tools:keep="@string/title_id">ID Saoire</string>
      <string name="title_name">Ainm</string>
      <string name="title_date">Dáta</string>
-     <string name="title_dashboard">Cuardaigh de réir Mí</string>
-     <string name="title_notifications">Cuardaigh de réir Mí</string>
+     <string name="title_dashboard" tools:keep="@string/title_dashboard">Cuardaigh de réir Mí</string>
+     <string name="title_notifications" tools:keep="@string/title_notifications">Cuardaigh de réir Mí</string>
+     <string name="all_holidays">Gach Laethanta Saoire</string>
+     <string name="bank_holidays">Laethanta Saoire Bainc</string>
 </resources>

@@ -4,14 +4,14 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class Holiday {
-    private String ID;
     private String Name;
     private String Date;
 
+    @SuppressWarnings("unused")
     public Holiday(JSONObject object)
     {
         try {
-            this.ID = object.getString("id");
+            String ID = object.getString("id");
             this.Name = object.getString("name");
             this.Date = object.getString("date");
 
@@ -26,23 +26,12 @@ public class Holiday {
         this.Date = Date;
     }
 
-    public String getID() {
-        return ID;
-    }
-
     public String getName() {
         return Name;
-    }
-
-    public void setName(String name) {
-        Name = name;
     }
 
     public String getDate() {
         return Date;
     }
 
-    public void setDate(String date) {
-        Date = date;
-    }
 }

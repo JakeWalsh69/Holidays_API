@@ -9,7 +9,7 @@ import cz.msebera.android.httpclient.Header;
 public class HolidayRestClient {
     private static final String BASE_URL = "https://holiday-api.azurewebsites.net/";
 
-    private static AsyncHttpClient client = new AsyncHttpClient();
+    private static final AsyncHttpClient client = new AsyncHttpClient();
 
     public static void get(Context context, String url, Header[] headers, RequestParams params,
                            AsyncHttpResponseHandler responseHandler) {

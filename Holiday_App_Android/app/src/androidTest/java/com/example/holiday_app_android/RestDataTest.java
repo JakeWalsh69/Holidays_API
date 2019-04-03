@@ -29,21 +29,23 @@ import static org.junit.Assert.*;
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
+@SuppressWarnings("unused")
 @RunWith(AndroidJUnit4.class)
 public class RestDataTest extends AppCompatActivity {
     // Creating Holiday ArrayLists and Objects to populate the ArrayLists
-    private ArrayList<Holiday> allHolidays = new ArrayList<>();
+    private final ArrayList<Holiday> allHolidays = new ArrayList<>();
+    @SuppressWarnings("MismatchedQueryAndUpdateOfCollection")
     private ArrayList<Holiday> holidayList;
-    Holiday h1 = new Holiday("Easter", "Sunday, 21 April");
-    Holiday h2 = new Holiday("Father's Day", "Sunday, 16 June");
-    Holiday h3 = new Holiday("Good Friday", "Friday, 19 April");
-    Holiday h4 = new Holiday("Easter Monday", "Monday, 22 April");
-    Holiday h5 = new Holiday("May Bank Holiday", "Monday, 06 May");
-    Holiday h6 = new Holiday("June Bank Holiday", "Monday, 03 June");
-    Holiday h7 = new Holiday("August Bank Holiday", "Monday, 05 August");
-    Holiday h8 = new Holiday("October Bank Holiday", "Monday, 28 October");
-    Holiday h9 = new Holiday("Christmas Day", "Wednesday, 25 December");
-    Holiday h10 = new Holiday("St. Stephens Day", "Thursday, 26 December");
+    private final Holiday h1 = new Holiday("Easter", "Sunday, 21 April");
+    private final Holiday h2 = new Holiday("Father's Day", "Sunday, 16 June");
+    private final Holiday h3 = new Holiday("Good Friday", "Friday, 19 April");
+    private final Holiday h4 = new Holiday("Easter Monday", "Monday, 22 April");
+    private final Holiday h5 = new Holiday("May Bank Holiday", "Monday, 06 May");
+    private final Holiday h6 = new Holiday("June Bank Holiday", "Monday, 03 June");
+    private final Holiday h7 = new Holiday("August Bank Holiday", "Monday, 05 August");
+    private final Holiday h8 = new Holiday("October Bank Holiday", "Monday, 28 October");
+    private final Holiday h9 = new Holiday("Christmas Day", "Wednesday, 25 December");
+    private final Holiday h10 = new Holiday("St. Stephens Day", "Thursday, 26 December");
 
     @Before
     public void setUp()
@@ -65,16 +67,16 @@ public class RestDataTest extends AppCompatActivity {
     // from the REST API to be used in tests.
     public void loadHolidayData()
     {
-        List<Header> headers = new ArrayList<Header>();
+        List<Header> headers = new ArrayList<>();
         headers.add(new BasicHeader("Accept", "application/json"));
 
-        HolidayRestClient.get(MainActivity.class.cast(Context.class), "api/Holidays", headers.toArray(new Header[headers.size()]),
+        HolidayRestClient.get(MainActivity.class.cast(Context.class), "api/Holidays", headers.toArray(new Header[0]),
                 null, new JsonHttpResponseHandler()
                 {
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, JSONArray response)
                     {
-                        ArrayList<Holiday> holidayArray = new ArrayList<Holiday>();
+                        ArrayList<Holiday> holidayArray = new ArrayList<>();
                         HolidayAdapter holidayAdapter = new HolidayAdapter(MainActivity.class.cast(Context.class), holidayArray);
 
                         for (int i = 0; i < response.length(); i++) {
@@ -103,7 +105,7 @@ public class RestDataTest extends AppCompatActivity {
         loadHolidayData();
         for (int i = 0; i < holidayList.size(); i++)
         {
-            assertTrue(allHolidays.get(i).getName() == holidayList.get(i).getName());
+            assertSame(allHolidays.get(i).getName(), holidayList.get(i).getName());
         }
     }
 }

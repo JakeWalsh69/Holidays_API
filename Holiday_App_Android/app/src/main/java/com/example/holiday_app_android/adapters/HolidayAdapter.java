@@ -1,22 +1,19 @@
 package com.example.holiday_app_android.adapters;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 import com.example.holiday_app_android.R;
 import com.example.holiday_app_android.models.Holiday;
 import java.util.ArrayList;
 
+@SuppressWarnings("NullableProblems")
 public class HolidayAdapter extends ArrayAdapter<Holiday> {
 
     private static class ViewHolder {
-        TextView id;
         TextView name;
         TextView date;
     }
@@ -39,8 +36,8 @@ public class HolidayAdapter extends ArrayAdapter<Holiday> {
             convertView = inflater.inflate(R.layout.item_holiday, parent, false);
 
 //            viewHolder.id = (TextView) convertView.findViewById(R.id.value_title_id);
-            viewHolder.name = (TextView) convertView.findViewById(R.id.value_title_name);
-            viewHolder.date = (TextView) convertView.findViewById(R.id.value_title_date);
+            viewHolder.name = convertView.findViewById(R.id.value_title_name);
+            viewHolder.date = convertView.findViewById(R.id.value_title_date);
 
             convertView.setTag(viewHolder);
         } else {
@@ -48,6 +45,7 @@ public class HolidayAdapter extends ArrayAdapter<Holiday> {
         }
 
 //        viewHolder.id.setText(holiday.getID());
+        assert holiday != null;
         viewHolder.name.setText(holiday.getName());
         viewHolder.date.setText(holiday.getDate());
 

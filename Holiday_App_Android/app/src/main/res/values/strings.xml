@@ -1,9 +1,11 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Irish Holiday App</string>
-    <string name="title_home">Home</string>
-    <string name="title_id">Holiday ID</string>
+    <string name="title_home" tools:keep="@string/title_home">Home</string>
+    <string name="title_id" tools:keep="@string/title_id">Holiday ID</string>
     <string name="title_name">Name</string>
     <string name="title_date">Date</string>
-    <string name="title_dashboard">Search by Month</string>
-    <string name="title_notifications">Filter by Type</string>
+    <string name="title_dashboard" tools:keep="@string/title_dashboard">Search by Month</string>
+    <string name="title_notifications" tools:keep="@string/title_notifications">Filter by Type</string>
+    <string name="all_holidays">All Holidays</string>
+    <string name="bank_holidays">Bank Holidays</string>
 </resources>

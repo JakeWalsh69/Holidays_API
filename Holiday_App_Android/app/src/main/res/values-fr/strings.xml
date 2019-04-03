@@ -1,9 +1,11 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
      <string name="app_name">Application irlandaise des vacances</string>
-     <string name="title_home">Accueil</string>
-     <string name="title_id">ID de vacances</string>
+     <string name="title_home" tools:keep="@string/title_home">Accueil</string>
+     <string name="title_id" tools:keep="@string/title_id">ID de vacances</string>
      <string name="title_name">Nom</string>
      <string name="title_date">Date</string>
-     <string name="title_dashboard">Recherche par mois</string>
-     <string name="title_notifications">Filtrer par type</string>
+     <string name="title_dashboard" tools:keep="@string/title_dashboard">Recherche par mois</string>
+     <string name="title_notifications" tools:keep="@string/title_notifications">Filtrer par type</string>
+     <string name="all_holidays">Tous les jours fériés</string>
+     <string name="bank_holidays">Jours fériés</string>
 </resources>
