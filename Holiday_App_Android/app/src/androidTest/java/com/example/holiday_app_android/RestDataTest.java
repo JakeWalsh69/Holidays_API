@@ -29,7 +29,7 @@ import static org.junit.Assert.*;
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
-@SuppressWarnings("unused")
+@SuppressWarnings("ALL")
 @RunWith(AndroidJUnit4.class)
 public class RestDataTest extends AppCompatActivity {
     // Creating Holiday ArrayLists and Objects to populate the ArrayLists
@@ -90,6 +90,7 @@ public class RestDataTest extends AppCompatActivity {
                 });
     }
 
+    @SuppressWarnings("deprecation")
     @Test
     public void useAppContext() {
         // Context of the app under test.
